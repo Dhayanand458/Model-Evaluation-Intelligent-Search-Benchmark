@@ -1,0 +1,29 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Build artefacts and harvested data. All of data/ is git-ignored -- the raw
+# JSONL pages (data/raw/), the parquet corpus, the embedding matrix and the
+# fitted classifier are all reproducible from `make ingest/embed/eval` and are
+# far too large to track.
+data/
+data/raw/
+
+# Plots written by the latest eval run. Regenerated every run; the committed
+# example lives under results/ instead (see below), so this stays ignored.
+assets/
+
+# Metric runs are git-ignored, EXCEPT one representative run checked in as a
+# worked example. Un-ignore that run's directory, then re-ignore its 20MB
+# classifier.joblib -- that estimator is a build artefact (a copy lives at
+# data/classifier.joblib) and does not belong in git. The JSON, markdown and
+# plots are kept so the README's numbers are traceable to files in the repo.
+results/*
+!results/20260720T201357Z/
+results/20260720T201357Z/classifier.joblib

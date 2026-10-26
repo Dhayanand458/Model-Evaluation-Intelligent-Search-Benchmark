@@ -1,0 +1,380 @@
+{
+  "best_method": "TF-IDF + logistic regression",
+  "class_map": {
+    "classes": [
+      "chat",
+      "chat-billing",
+      "chat-terminal",
+      "ux",
+      "copilot-cli-agent",
+      "accessibility",
+      "git"
+    ],
+    "demoted": [
+      {
+        "holdout_count": 0,
+        "label": "chat-agents-view",
+        "reason": "holdout support 0 < 10",
+        "train_count": 416
+      },
+      {
+        "holdout_count": 4,
+        "label": "chat-agent",
+        "reason": "holdout support 4 < 10",
+        "train_count": 272
+      },
+      {
+        "holdout_count": 9,
+        "label": "chat-prompts",
+        "reason": "holdout support 9 < 10",
+        "train_count": 237
+      }
+    ],
+    "holdout_counts": {
+      "accessibility": 44,
+      "chat": 56,
+      "chat-billing": 122,
+      "chat-terminal": 54,
+      "copilot-cli-agent": 56,
+      "git": 14,
+      "other": 9069,
+      "ux": 146
+    },
+    "k_requested": 10,
+    "min_holdout_support": 10,
+    "other_class": "other",
+    "other_composition": {
+      "labelled_but_no_class_label": 30696,
+      "unlabelled_entirely": 13026
+    },
+    "ranking_rule": "component labels ranked by frequency in the training split only",
+    "resolution_prefix": "*",
+    "stoplist": {
+      "provenance": [
+        "ai-analyzed",
+        "ai-generated",
+        "ai-translated",
+        "ai-triaged"
+      ],
+      "status": [
+        "accessibility-sla",
+        "author-verification-requested",
+        "candidate",
+        "confirmation-pending",
+        "confirmed",
+        "duplicate",
+        "endgame-plan",
+        "error-telemetry",
+        "follow-up",
+        "good first issue",
+        "help wanted",
+        "important",
+        "info-needed",
+        "insiders-released",
+        "invalid",
+        "needs more info",
+        "new release",
+        "on-release-notes",
+        "on-testplan",
+        "recent-regression",
+        "regression",
+        "smoke-test-failure",
+        "spam",
+        "stable-anomaly",
+        "stale",
+        "testplan-item",
+        "triage-needed",
+        "under-discussion",
+        "unreleased",
+        "upstream",
+        "verification-found",
+        "verification-needed",
+        "verification-steps-needed",
+        "verified",
+        "z-author-verified"
+      ],
+      "type": [
+        "bug",
+        "debt",
+        "engineering",
+        "feature-request",
+        "freeze-slow-crash-leak",
+        "modernization",
+        "papercut :drop_of_blood:",
+        "perf",
+        "polish",
+        "security"
+      ]
+    },
+    "tie_break_rule": "multi-label issues take the class with the highest training frequency",
+    "train_counts": {
+      "accessibility": 259,
+      "chat": 826,
+      "chat-billing": 749,
+      "chat-terminal": 616,
+      "copilot-cli-agent": 419,
+      "git": 264,
+      "other": 34653,
+      "ux": 457
+    }
+  },
+  "classification": [
+    {
+      "accuracy": 0.9485409475996235,
+      "latency": null,
+      "macro_f1": 0.1216988727858293,
+      "method": "majority baseline",
+      "notes": "predicts the most frequent training class for every issue",
+      "per_class": {
+        "accessibility": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 44.0
+        },
+        "chat": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 56.0
+        },
+        "chat-billing": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 122.0
+        },
+        "chat-terminal": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 54.0
+        },
+        "copilot-cli-agent": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 56.0
+        },
+        "git": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 14.0
+        },
+        "other": {
+          "f1": 0.9735909822866344,
+          "precision": 0.9485409475996235,
+          "recall": 1.0,
+          "support": 9069.0
+        },
+        "ux": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 146.0
+        }
+      },
+      "weighted_f1": 0.9234909129126124
+    },
+    {
+      "accuracy": 0.7566154167974062,
+      "latency": {
+        "mean_ms": 1.0363444514159716,
+        "n_queries": 9561,
+        "p50_ms": 0.9224000000358501,
+        "p95_ms": 2.00789999985318
+      },
+      "macro_f1": 0.3069562629459519,
+      "method": "TF-IDF + logistic regression",
+      "notes": "vectoriser fit on training split only; class_weight=balanced",
+      "per_class": {
+        "accessibility": {
+          "f1": 0.4126984126984127,
+          "precision": 0.3170731707317073,
+          "recall": 0.5909090909090909,
+          "support": 44.0
+        },
+        "chat": {
+          "f1": 0.036011080332409975,
+          "precision": 0.01951951951951952,
+          "recall": 0.23214285714285715,
+          "support": 56.0
+        },
+        "chat-billing": {
+          "f1": 0.49404761904761907,
+          "precision": 0.3878504672897196,
+          "recall": 0.680327868852459,
+          "support": 122.0
+        },
+        "chat-terminal": {
+          "f1": 0.25,
+          "precision": 0.1464968152866242,
+          "recall": 0.8518518518518519,
+          "support": 54.0
+        },
+        "copilot-cli-agent": {
+          "f1": 0.15311004784688995,
+          "precision": 0.08839779005524862,
+          "recall": 0.5714285714285714,
+          "support": 56.0
+        },
+        "git": {
+          "f1": 0.06635071090047394,
+          "precision": 0.03553299492385787,
+          "recall": 0.5,
+          "support": 14.0
+        },
+        "other": {
+          "f1": 0.8606780499876269,
+          "precision": 0.9804087385482735,
+          "recall": 0.7670084904620135,
+          "support": 9069.0
+        },
+        "ux": {
+          "f1": 0.18275418275418276,
+          "precision": 0.11251980982567353,
+          "recall": 0.4863013698630137,
+          "support": 146.0
+        }
+      },
+      "weighted_f1": 0.8299993284000717
+    },
+    {
+      "accuracy": 0.9406965798556637,
+      "latency": {
+        "mean_ms": 5.178328490743395,
+        "n_queries": 9561,
+        "p50_ms": 4.973099999915576,
+        "p95_ms": 6.835099999989325
+      },
+      "macro_f1": 0.23101859180359102,
+      "method": "embedding kNN (k=10)",
+      "notes": "cosine neighbours restricted to the training split via candidate mask",
+      "per_class": {
+        "accessibility": {
+          "f1": 0.14545454545454545,
+          "precision": 0.36363636363636365,
+          "recall": 0.09090909090909091,
+          "support": 44.0
+        },
+        "chat": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 56.0
+        },
+        "chat-billing": {
+          "f1": 0.4260869565217391,
+          "precision": 0.4537037037037037,
+          "recall": 0.4016393442622951,
+          "support": 122.0
+        },
+        "chat-terminal": {
+          "f1": 0.1348314606741573,
+          "precision": 0.17142857142857143,
+          "recall": 0.1111111111111111,
+          "support": 54.0
+        },
+        "copilot-cli-agent": {
+          "f1": 0.024390243902439025,
+          "precision": 0.038461538461538464,
+          "recall": 0.017857142857142856,
+          "support": 56.0
+        },
+        "git": {
+          "f1": 0.10810810810810811,
+          "precision": 0.08695652173913043,
+          "recall": 0.14285714285714285,
+          "support": 14.0
+        },
+        "other": {
+          "f1": 0.9695423204299908,
+          "precision": 0.9549732620320855,
+          "recall": 0.9845627963391774,
+          "support": 9069.0
+        },
+        "ux": {
+          "f1": 0.039735099337748346,
+          "precision": 0.6,
+          "recall": 0.02054794520547945,
+          "support": 146.0
+        }
+      },
+      "weighted_f1": 0.9274263678722943
+    }
+  ],
+  "config": {
+    "holdout_fraction": 0.2,
+    "k_classes": 10,
+    "min_holdout_support": 10,
+    "neighbours": 10,
+    "retrieval_k": 5,
+    "seed": 20260720
+  },
+  "corpus": {
+    "embedding_backend": "sentence-transformers",
+    "embedding_content_hash": "59a3470615ff837bf4e2b971a4529a2570809e636b4555bcb3cded5e906eabab",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "repos": [
+      "microsoft/vscode"
+    ],
+    "rows": 47804
+  },
+  "environment": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.12",
+    "scikit-learn": "1.9.0",
+    "sentence-transformers": "5.6.0"
+  },
+  "generated_at": "2026-07-20T20:13:59.261770+00:00",
+  "proxy_disclaimer": "label-match precision@5 is a PROXY for duplicate/similar-issue retrieval. It measures how often a retrieved neighbour shares the query issue's component class, NOT whether it is actually a duplicate. There is no duplicate-pair ground truth in this corpus. Two issues in the same component are usually not duplicates, so treat this as a relative signal for comparing retrieval methods, never as an absolute duplicate-detection rate.",
+  "retrieval_proxy": [
+    {
+      "disclaimer": "label-match precision@5 is a PROXY for duplicate/similar-issue retrieval. It measures how often a retrieved neighbour shares the query issue's component class, NOT whether it is actually a duplicate. There is no duplicate-pair ground truth in this corpus. Two issues in the same component are usually not duplicates, so treat this as a relative signal for comparing retrieval methods, never as an absolute duplicate-detection rate.",
+      "k": 5,
+      "latency": {
+        "mean_ms": 4.823513126241586,
+        "n_queries": 9561,
+        "p50_ms": 4.708400000026813,
+        "p95_ms": 6.017599999950107
+      },
+      "method": "embeddings (all-MiniLM-L6-v2, exact cosine)",
+      "metric": "label_match_precision_at_k_PROXY",
+      "n_queries_all": 9561,
+      "n_queries_excluding_other": 492,
+      "precision_all": 0.87463654429453,
+      "precision_excluding_other": 0.21219512195121953
+    },
+    {
+      "disclaimer": "label-match precision@5 is a PROXY for duplicate/similar-issue retrieval. It measures how often a retrieved neighbour shares the query issue's component class, NOT whether it is actually a duplicate. There is no duplicate-pair ground truth in this corpus. Two issues in the same component are usually not duplicates, so treat this as a relative signal for comparing retrieval methods, never as an absolute duplicate-detection rate.",
+      "k": 5,
+      "latency": {
+        "mean_ms": 230.09687354879077,
+        "n_queries": 9561,
+        "p50_ms": 160.65089999983684,
+        "p95_ms": 203.5769999997683
+      },
+      "method": "TF-IDF cosine",
+      "metric": "label_match_precision_at_k_PROXY",
+      "n_queries_all": 9561,
+      "n_queries_excluding_other": 492,
+      "precision_all": 0.8876686539064952,
+      "precision_excluding_other": 0.09593495934959351
+    }
+  ],
+  "seed": 20260720,
+  "split": {
+    "boundary": "2026-04-14T07:15:16Z",
+    "holdout_first": "2026-04-14T07:15:16Z",
+    "holdout_fraction": 0.2,
+    "holdout_last": "2026-07-20T11:48:09Z",
+    "n_holdout": 9561,
+    "n_total": 47804,
+    "n_train": 38243,
+    "train_first": "2025-07-20T00:08:03Z",
+    "train_last": "2026-04-14T07:12:09Z"
+  }
+}

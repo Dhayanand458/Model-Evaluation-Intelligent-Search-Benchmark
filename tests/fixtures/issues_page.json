@@ -1,0 +1,114 @@
+[
+  {
+    "id": 2000000001,
+    "number": 201,
+    "html_url": "https://github.com/microsoft/vscode/issues/201",
+    "title": "Editor freezes when opening large minified JS",
+    "body": "Opening a 40MB bundle.min.js pins the renderer at 100% CPU.",
+    "user": {"login": "octocat", "id": 1},
+    "labels": [
+      {"id": 1, "name": "bug", "color": "d73a4a"},
+      {"id": 2, "name": "perf", "color": "0e8a16"}
+    ],
+    "state": "open",
+    "state_reason": null,
+    "comments": 14,
+    "created_at": "2024-03-11T09:22:41Z",
+    "updated_at": "2024-05-02T11:00:00Z",
+    "closed_at": null,
+    "author_association": "NONE"
+  },
+  {
+    "id": 2000000002,
+    "number": 202,
+    "html_url": "https://github.com/microsoft/vscode/pull/202",
+    "title": "fix: debounce the minifier heuristics",
+    "body": "Closes #201.",
+    "user": {"login": "contributor", "id": 2},
+    "labels": [{"id": 1, "name": "bug", "color": "d73a4a"}],
+    "state": "closed",
+    "state_reason": "completed",
+    "comments": 3,
+    "created_at": "2024-03-14T16:04:00Z",
+    "updated_at": "2024-03-20T08:15:00Z",
+    "closed_at": "2024-03-20T08:15:00Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/microsoft/vscode/pulls/202",
+      "html_url": "https://github.com/microsoft/vscode/pull/202",
+      "merged_at": "2024-03-20T08:15:00Z"
+    },
+    "author_association": "MEMBER"
+  },
+  {
+    "id": 2000000003,
+    "number": 203,
+    "html_url": "https://github.com/microsoft/vscode/issues/203",
+    "title": "Terminal scrollback lost after reload",
+    "body": null,
+    "user": {"login": "someone", "id": 3},
+    "labels": [],
+    "state": "closed",
+    "state_reason": "not_planned",
+    "comments": 0,
+    "created_at": "2024-02-01T00:00:00Z",
+    "updated_at": "2024-02-09T12:30:00Z",
+    "closed_at": "2024-02-09T12:30:00Z",
+    "author_association": "NONE"
+  },
+  {
+    "id": 2000000004,
+    "number": 204,
+    "html_url": "https://github.com/microsoft/vscode/pull/204",
+    "title": "chore: bump electron",
+    "body": "Routine dependency bump.",
+    "user": {"login": "bot", "id": 4},
+    "labels": [{"id": 9, "name": "dependencies", "color": "ededed"}],
+    "state": "open",
+    "state_reason": null,
+    "comments": 1,
+    "created_at": "2024-04-02T10:10:10Z",
+    "updated_at": "2024-04-02T10:10:10Z",
+    "closed_at": null,
+    "pull_request": null,
+    "author_association": "CONTRIBUTOR"
+  },
+  {
+    "id": 2000000005,
+    "number": 205,
+    "html_url": "https://github.com/microsoft/vscode/issues/205",
+    "title": "Feature request: per-workspace font size",
+    "body": "Would like editor.fontSize to be settable per workspace.",
+    "user": {"login": "requester", "id": 5},
+    "labels": [
+      {"id": 3, "name": "feature-request", "color": "1d76db"},
+      {"id": 4, "name": "editor", "color": "5319e7"},
+      {"id": 5, "name": "under-discussion", "color": "fbca04"}
+    ],
+    "state": "closed",
+    "state_reason": "completed",
+    "comments": 27,
+    "created_at": "2024-01-15T08:00:00Z",
+    "updated_at": "2024-06-01T09:00:00Z",
+    "closed_at": "2024-06-01T09:00:00Z",
+    "author_association": "NONE"
+  },
+  {
+    "id": 2000000001,
+    "number": 201,
+    "html_url": "https://github.com/microsoft/vscode/issues/201",
+    "title": "Editor freezes when opening large minified JS",
+    "body": "Opening a 40MB bundle.min.js pins the renderer at 100% CPU.",
+    "user": {"login": "octocat", "id": 1},
+    "labels": [
+      {"id": 1, "name": "bug", "color": "d73a4a"},
+      {"id": 2, "name": "perf", "color": "0e8a16"}
+    ],
+    "state": "open",
+    "state_reason": null,
+    "comments": 14,
+    "created_at": "2024-03-11T09:22:41Z",
+    "updated_at": "2024-05-02T11:00:00Z",
+    "closed_at": null,
+    "author_association": "NONE"
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "classes": [
+    "chat",
+    "chat-billing",
+    "chat-terminal",
+    "ux",
+    "copilot-cli-agent",
+    "accessibility",
+    "git"
+  ],
+  "other_class": "other",
+  "k_requested": 10,
+  "min_holdout_support": 10,
+  "ranking_rule": "component labels ranked by frequency in the training split only",
+  "tie_break_rule": "multi-label issues take the class with the highest training frequency",
+  "demoted": [
+    {
+      "label": "chat-agents-view",
+      "train_count": 416,
+      "holdout_count": 0,
+      "reason": "holdout support 0 < 10"
+    },
+    {
+      "label": "chat-agent",
+      "train_count": 272,
+      "holdout_count": 4,
+      "reason": "holdout support 4 < 10"
+    },
+    {
+      "label": "chat-prompts",
+      "train_count": 237,
+      "holdout_count": 9,
+      "reason": "holdout support 9 < 10"
+    }
+  ],
+  "stoplist": {
+    "status": [
+      "accessibility-sla",
+      "author-verification-requested",
+      "candidate",
+      "confirmation-pending",
+      "confirmed",
+      "duplicate",
+      "endgame-plan",
+      "error-telemetry",
+      "follow-up",
+      "good first issue",
+      "help wanted",
+      "important",
+      "info-needed",
+      "insiders-released",
+      "invalid",
+      "needs more info",
+      "new release",
+      "on-release-notes",
+      "on-testplan",
+      "recent-regression",
+      "regression",
+      "smoke-test-failure",
+      "spam",
+      "stable-anomaly",
+      "stale",
+      "testplan-item",
+      "triage-needed",
+      "under-discussion",
+      "unreleased",
+      "upstream",
+      "verification-found",
+      "verification-needed",
+      "verification-steps-needed",
+      "verified",
+      "z-author-verified"
+    ],
+    "type": [
+      "bug",
+      "debt",
+      "engineering",
+      "feature-request",
+      "freeze-slow-crash-leak",
+      "modernization",
+      "papercut :drop_of_blood:",
+      "perf",
+      "polish",
+      "security"
+    ],
+    "provenance": [
+      "ai-analyzed",
+      "ai-generated",
+      "ai-translated",
+      "ai-triaged"
+    ]
+  },
+  "resolution_prefix": "*",
+  "train_counts": {
+    "chat": 826,
+    "chat-billing": 749,
+    "chat-terminal": 616,
+    "ux": 457,
+    "copilot-cli-agent": 419,
+    "accessibility": 259,
+    "git": 264,
+    "other": 34653
+  },
+  "holdout_counts": {
+    "chat": 56,
+    "chat-billing": 122,
+    "chat-terminal": 54,
+    "ux": 146,
+    "copilot-cli-agent": 56,
+    "accessibility": 44,
+    "git": 14,
+    "other": 9069
+  },
+  "other_composition": {
+    "unlabelled_entirely": 13026,
+    "labelled_but_no_class_label": 30696
+  }
+}

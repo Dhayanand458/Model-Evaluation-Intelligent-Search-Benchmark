@@ -1,0 +1,8 @@
+# Normalise text to LF in the repository; check out native on each platform.
+* text=auto eol=lf
+
+# Binaries git must not touch.
+*.png  binary
+*.npy  binary
+*.parquet binary
+*.joblib binary
